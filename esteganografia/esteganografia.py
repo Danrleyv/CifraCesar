@@ -1,10 +1,5 @@
 import cv2
 
-#Função do Professor para decriptografar a imagem
-def decriptografar(img):
-    imgDec = (img % 4) * 64
-    return imgDec
-
 #Função para criar uma matriz de qualquer tamanho inicializada com 0
 def criaMatriz(n_linhas, n_colunas):
     matriz = []  # lista vazia
@@ -116,6 +111,11 @@ def esteganografia(img1, img2):
 
     #Retorna a imagem alterada
     return img2
+
+#Função para decriptografar a imagem
+def decriptografar(img):
+    imgDec = (img % 4) * 64
+    return imgDec
 
 
 img1 = cv2.imread("lenna.png")
